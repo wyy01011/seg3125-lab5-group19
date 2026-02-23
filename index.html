@@ -193,59 +193,267 @@
 
     </div>
 
-    <div class="staff"> <!--Section to showcase the staff team and their role.-->
-        <!--Code for cards and bootstrap components retrieved from W3Schools: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp.-->
-        <!--Card code also retrieved from the provided GitHub example code.-->
+    <div class="staff">
         <br>
-        <h3>Our Staff Team</h3>
+        <h3>✂ Our Staff Team</h3>
         <br>
 
         <div class="container p-3">
-            <div class="card-columns mx-auto d-flex justify-content-center" style="max-width: 1000px;"> <!--Div class to hold cards in columns.-->
+            <div class="row mx-auto justify-content-center" style="max-width: 1000px;">
 
-                <!--Staff member 1.-->
-                <div class="card bg-danger text-center">
-                    <img class="card-img-top" src="edwin.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h4 class="card-title">Edwin</h4> <!--Staff name.-->
-                        <p class="card-text">Licensed Barber for 15 years.</p>
-                        <a href="#profile1" class="btn btn-primary" data-toggle="collapse">Learn About Me</a>
-                        <!--Collapsible part to showcase extra information about the staff member.-->
-                        <div id="profile1" class="collapse p-3">
-                            <p>My name is Edwin Santacruz, im 33 years of age. Born and raised in Los Angeles CA. I
-                                moved to San Antonio TX in 2011. I started cutting hair at the age of 15 but I have been
-                                a Texas licensed barber since 2013. Number 1 Lakers Fan, best team in the NBA .</p>
+                <!-- Staff member 1 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="edvin2.jpeg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Edwin</h4>
+                            <p class="card-text">
+                                Licensed Barber for 15 years.<br>
+                                Work Days: Monday to Friday<br>
+                                Work Hours: 9AM - 3PM
+                            </p>
+                            <a class="btn btn-primary" data-toggle="modal" data-target="#profile1Modal">Learn About
+                                Me</a>
                         </div>
                     </div>
                 </div>
 
-                <!--Staff member 2.-->
-                <div class="card bg-danger text-center">
-                    <img class="card-img-top" src="drew.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h4 class="card-title">Drew</h4>
-                        <p class="card-text">Senior Hair Stylist for 23 years.</p>
-                        <a href="#profile2" class="btn btn-primary" data-toggle="collapse">Learn About Me</a>
-                        <div id="profile2" class="collapse p-3">
-                            <p>My name is Drew Oneal, I’m 28 years old. From San Antonio, TX. I have been a licensed
-                                barber since 2012.</p>
+                <!-- Modal 1 -->
+                <div class="modal fade" id="profile1Modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edwin</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>My name is Edwin Santacruz, im 33 years of age. Born and raised in Los Angeles CA. I
+                                    moved to San Antonio TX in 2011. I started cutting hair at the age of 15 but I have
+                                    been a Texas licensed barber since 2013. Number 1 Lakers Fan, best team in the NBA.
+                                </p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
-                <!--Staff member 3.-->
-                <div class="card bg-danger text-center">
-                    <img class="card-img-top" src="samuel.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h4 class="card-title">Samuel</h4>
-                        <p class="card-text">Practiced Barber for 12 years.</p>
-                        <a href="#profile3" class="btn btn-primary" data-toggle="collapse">Learn About Me</a>
-                        <div id="profile3" class="collapse p-3">
-                            <p>My name is Samuel Bahng and I have been a licensed barber since 2022! Moved to San
-                                Antonio when I was a kid and have been here ever since!</p>
+                <!-- Staff member 2 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="drew.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Drew</h4>
+                            <p class="card-text">Senior Hair Stylist for 23 years.<br>
+                                Work Days: Wednesday to Friday<br>
+                                Work Hours: 9AM - 3PM</p>
+                            <a class="btn btn-primary" data-toggle="modal" data-target="#profile2Modal">Learn About
+                                Me</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal 2 -->
+                <div class="modal fade" id="profile2Modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title">Drew</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>My name is Drew Oneal, I’m 28 years old. From San Antonio, TX. I have been a licensed
+                                    barber since 2012.</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff member 3 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="sam.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Samuel</h4>
+                            <p class="card-text">Practiced Barber for 12 years.
+                                <br>
+                                Work Days: Tuesday to Saturday<br>
+                                Work Hours: 1PM - 5PM
+                            </p>
+                            <a class="btn btn-primary" data-toggle="modal" data-target="#profile3Modal">Learn About
+                                Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 3 -->
+                <div class="modal fade" id="profile3Modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title">Samuel</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>My name is Samuel Bahng and I have been a licensed barber since 2022! Moved to San
+                                    Antonio when I was a kid and have been here ever since!</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff member 4 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="joshua.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Joshua</h4>
+                            <p class="card-text">Experienced Barber for 11 years.
+                                <br>
+                                Work Days: Monday to Thursday<br>
+                                Work Hours: 12PM - 4PM
+                            </p>
+                            <a class="btn btn-primary" data-toggle="modal" data-target="#profile4Modal">Learn About
+                                Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 4 -->
+                <div class="modal fade" id="profile4Modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title">Joshua</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>My name is Joshua Sanchez Morales. I’m 26 years of age. Born and raised in San
+                                    Antonio TX. I been a licensed barber since 2012.</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff member 5 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="roger.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Roger</h4>
+                            <p class="card-text">Junior Hair Stylist for 14 years.
+                                <br>
+                                Work Days: Saturday<br>
+                                Work Hours: 9AM - 5PM
+                            </p>
+                            <a class="btn btn-primary" data-toggle="modal" data-target="#profile5Modal">Learn About
+                                Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 5 -->
+                <div class="modal fade" id="profile5Modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title">Roger</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>My name is Roger Gonzales. I’m 28 years of age. Born and raised in San Antonio TX. I
+                                    have been a licensed barber since 2017 but have over 10 years of barber experience.
+                                </p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff member 6 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="miguel.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Miguel</h4>
+                            <p class="card-text">Junior Hair Stylist for 20 years.
+                                <br>
+                                Work Days: Monday, Friday<br>
+                                Work Hours: 10AM - 2PM
+                            </p>
+                            <a class="btn btn-primary" data-toggle="modal" data-target="#profile6Modal">Learn About
+                                Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal 6 -->
+                <div class="modal fade" id="profile6Modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title">Miguel</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>My name is Miguel ortiz. I am 26 years of age. Born in Queretaro, Mexico but raised
+                                    in San Antonio TX. I been a licensed barber since 2012.</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -270,9 +478,15 @@
                                 <div class="row no-gutters">
 
                                     <!-- headers -->
-                                    <div class="col-4 col-md-4"><h4>Haircuts</h4></div>
-                                    <div class="col-4 col-md-4"><h4>Hairstyling</h4></div>
-                                    <div class="col-4 col-md-4"><h4>Add-ons</h4></div>
+                                    <div class="col-4 col-md-4">
+                                        <h4>Haircuts</h4>
+                                    </div>
+                                    <div class="col-4 col-md-4">
+                                        <h4>Hairstyling</h4>
+                                    </div>
+                                    <div class="col-4 col-md-4">
+                                        <h4>Add-ons</h4>
+                                    </div>
 
                                     <div class="col-4 col-md-4">
                                         <div class="form-check">
@@ -390,20 +604,23 @@
                                     <div class="form-group">
                                         <label for="exampleInputName">Name</label>
                                         <input type="text" class="form-control" id="nameInput" placeholder="Enter name">
-                                        <small id="nameHelp" class="form-text text-muted">Used to identify your appointment when you arrive.</small>
+                                        <small id="nameHelp" class="form-text text-muted">Used to identify your
+                                            appointment when you arrive.</small>
 
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail">Email address</label>
                                         <input type="email" class="form-control" id="exampleInputEmail"
                                             aria-describedby="emailHelp" placeholder="Enter email">
-                                        <small id="emailHelp" class="form-text text-muted">We’ll send confirmation and reminders here.</small>
+                                        <small id="emailHelp" class="form-text text-muted">We’ll send confirmation and
+                                            reminders here.</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPhone">Phone number</label>
                                         <input type="text" class="form-control" id="phoneInput"
                                             placeholder="Enter phone number">
-                                            <small id="phoneHelp" class="form-text text-muted">Needed in case we must contact you about schedule changes.</small>
+                                        <small id="phoneHelp" class="form-text text-muted">Needed in case we must
+                                            contact you about schedule changes.</small>
                                     </div>
 
                                     <button type="submit" class="btn btn-primary">Submit</button>

@@ -52,7 +52,7 @@ h3, h4 {
 }
 
 /*Styling below done for the card components for staff members.*/
-.card-columns .card {
+.staff .card {
     width: 260px !important; /*!important tag overrides the given CSS from bootstrap.*/
     border: none;
     border-radius: 10px;
@@ -60,18 +60,18 @@ h3, h4 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.card-columns .card.bg-warning,
-.card-columns .card.bg-danger {
+.staff .card.bg-warning,
+.staff .card.bg-danger {
     background-color: #d4d4d4 !important;
 }
 
-.card-columns .card .card-img-top {
+.staff .card .card-img-top {
     border: none;
     border-radius: 0;
     display: block;
 }
 
-.card-columns .card .btn-primary {
+.staff .card .btn-primary {
     background-color: #616161;
     border: none;
     color: white;
@@ -83,7 +83,7 @@ h3, h4 {
 }
 
 /*Styling for the buttons inside cards.*/
-.card-columns .card .btn-primary:hover {
+.staff .card .btn-primary:hover {
     background-color: #222222;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
