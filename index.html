@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LuxeSlice</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> <!--Reference to the css stylesheet.-->
+    <!--Bootstrap scripts.-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="top-carousel-overlay">
+        <h1 class="top-carousel-title">LuxeSlice</h1>
+        <p class="top-carousel-subtitle">High quality cuts paired with high quality bites.</p>
+        <a class="btn btn-primary top-carousel-btn" href="#accordion">Book Now</a>
+    </div>
+
+    <!-- ===== TOP PHOTO GALLERY  ===== -->
+    <section class="top-carousel" id="gallery">
+        <div id="photoGalleryCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+            <ol class="carousel-indicators">
+                <li data-target="#photoGalleryCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#photoGalleryCarousel" data-slide-to="1"></li>
+                <li data-target="#photoGalleryCarousel" data-slide-to="2"></li>
+                <li data-target="#photoGalleryCarousel" data-slide-to="3"></li>
+                <li data-target="#photoGalleryCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="PG1.jpg" class="d-block w-100 top-carousel-img" alt="Gallery photo 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="PG2.jpg" class="d-block w-100 top-carousel-img" alt="Gallery photo 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="PG3.jpg" class="d-block w-100 top-carousel-img" alt="Gallery photo 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="PG4.jpg" class="d-block w-100 top-carousel-img" alt="Gallery photo 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="PG5.jpg" class="d-block w-100 top-carousel-img" alt="Gallery photo 5">
+                </div>
+            </div>
+
+            <!-- Left/Right arrows -->
+            <a class="carousel-control-prev" href="#photoGalleryCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#photoGalleryCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+
+    <div class="services"> <!--Section to list out all services and their prices.-->
+        <h3>Services & Pricing</h3>
+        <br>
+        <div class="table-responsive"> <!--Holds a table created from bootstrap componenets. External css added.-->
+            <h4>Haircuts</h4>
+            <p>All haircut sessions include a consultation session, shampoo & conditioner, a stress-relieving scalp
+                massage, and a complimentary slice of Cheesecake.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Types of Haircuts</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Classic Cut</td>
+                        <td>
+                            A clean classic haircut that focuses on <br>shortning hair length and trimming the
+                            edges.<br>
+                            <img src="classiccut.jpg" alt="Classic Cut" width="120" height="120">
+                        </td>
+                        <td>$19.99</td>
+                    </tr>
+                    <tr>
+                        <td>Signature Cut</td>
+                        <td>
+                            Our signature haircut style not found <br>anywhere else! Enjoy a modern and unique look.<br>
+                            <img src="signaturecut.jpg" alt="Signature Cut" width="120" height="120">
+                        </td>
+                        <td>$24.99</td>
+                    </tr>
+                    <tr>
+                        <td>Premium Cut</td>
+                        <td>
+                            A premium haircut session that will <br>take in all your personal requests with no
+                            exceptions.<br>
+                            <img src="premiumcut.jpg" alt="Premium Cut" width="120" height="120">
+                        </td>
+                        <td>$30.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="table-responsive">
+            <h4>Hairstyling</h4>
+            <p>Style off your hair after a fresh cut or walk in! Additional charges apply.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Types of Stylings</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Blowout Style</td>
+                        <td>
+                            A smooth style with heat styling to <br>add lift, body, and movement. Bouncy finish.<br>
+                            <img src="blowoutstyle.jpg" alt="Blowout Style" width="120" height="120">
+                        </td>
+                        <td>$12.99</td>
+                    </tr>
+                    <tr>
+                        <td>Curl & Wave Style</td>
+                        <td>
+                            A soft and textured look that features <br>defined curls or loose waves for good flow.<br>
+                            <img src="curlstyle.jpg" alt="Curl Style" width="120" height="120">
+                        </td>
+                        <td>$13.99</td>
+                    </tr>
+                    <tr>
+                        <td>Sleek Press Style</td>
+                        <td>
+                            A silky and straight style with a <br>glossy style that turns into a nice elegant look.<br>
+                            <img src="sleekstyle.jpg" alt="Sleek Style" width="120" height="120">
+                        </td>
+                        <td>$25.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="table-responsive">
+            <h4>Add Ons</h4>
+            <p>Add on additional treatments and services to your haircuts or hairstyling appointments.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Types of Add Ons</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hydration Treatment</td>
+                        <td>
+                            A deep-moisturizing service that <br>restores softness and shine to dry or damaged hair.<br>
+                            <img src="hydration.png" alt="Blowout Style" width="120" height="120">
+                        </td>
+                        <td>$16.99</td>
+                    </tr>
+                    <tr>
+                        <td>Scalp Therapy</td>
+                        <td>
+                            A targeted treatment that soothes <br>irritation and that will remove buildup.<br>
+                            <img src="scalp.png" alt="Curl Style" width="120" height="120">
+                        </td>
+                        <td>$18.99</td>
+                    </tr>
+                    <tr>
+                        <td>Hot Towel Service</td>
+                        <td>
+                            A relaxing warm towel treatment <br>that will open pores and enhance comfort after a
+                            haircut.<br>
+                            <img src="towel.jpg" alt="Sleek Style" width="120" height="120">
+                        </td>
+                        <td>$14.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="staff"> <!--Section to showcase the staff team and their role.-->
+        <!--Code for cards and bootstrap components retrieved from W3Schools: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp.-->
+        <!--Card code also retrieved from the provided GitHub example code.-->
+        <br>
+        <h3>Our Staff Team</h3>
+        <br>
+
+        <div class="container p-3">
+            <div class="card-columns mx-auto d-flex justify-content-center" style="max-width: 1000px;"> <!--Div class to hold cards in columns.-->
+
+                <!--Staff member 1.-->
+                <div class="card bg-danger text-center">
+                    <img class="card-img-top" src="edwin.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Edwin</h4> <!--Staff name.-->
+                        <p class="card-text">Licensed Barber for 15 years.</p>
+                        <a href="#profile1" class="btn btn-primary" data-toggle="collapse">Learn About Me</a>
+                        <!--Collapsible part to showcase extra information about the staff member.-->
+                        <div id="profile1" class="collapse p-3">
+                            <p>My name is Edwin Santacruz, im 33 years of age. Born and raised in Los Angeles CA. I
+                                moved to San Antonio TX in 2011. I started cutting hair at the age of 15 but I have been
+                                a Texas licensed barber since 2013. Number 1 Lakers Fan, best team in the NBA .</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Staff member 2.-->
+                <div class="card bg-danger text-center">
+                    <img class="card-img-top" src="drew.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Drew</h4>
+                        <p class="card-text">Senior Hair Stylist for 23 years.</p>
+                        <a href="#profile2" class="btn btn-primary" data-toggle="collapse">Learn About Me</a>
+                        <div id="profile2" class="collapse p-3">
+                            <p>My name is Drew Oneal, I’m 28 years old. From San Antonio, TX. I have been a licensed
+                                barber since 2012.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Staff member 3.-->
+                <div class="card bg-danger text-center">
+                    <img class="card-img-top" src="samuel.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Samuel</h4>
+                        <p class="card-text">Practiced Barber for 12 years.</p>
+                        <a href="#profile3" class="btn btn-primary" data-toggle="collapse">Learn About Me</a>
+                        <div id="profile3" class="collapse p-3">
+                            <p>My name is Samuel Bahng and I have been a licensed barber since 2022! Moved to San
+                                Antonio when I was a kid and have been here ever since!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collapsible with multiple items -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <div class="d-flex justify-content-center"
+        style="background-image: url('servicesbg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="w-100" style="max-width: 500px; margin-top: 10px; margin-bottom: 10px;">
+            <h3>Book Here</h3>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                    </div>
+                    <div id="collapseService" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Here is our list of services</p>
+                            <p>Helps us prepare the right tools and timing.</p>
+
+                            <form>
+                                <div class="row no-gutters">
+
+                                    <!-- headers -->
+                                    <div class="col-4 col-md-4"><h4>Haircuts</h4></div>
+                                    <div class="col-4 col-md-4"><h4>Hairstyling</h4></div>
+                                    <div class="col-4 col-md-4"><h4>Add-ons</h4></div>
+
+                                    <div class="col-4 col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="classicCut" name="service1"
+                                                value="classicCut">
+                                            <label class="form-check-label" for="classicCut">Classic Cut</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="blowoutStyle"
+                                                name="service2" value="blowoutStyle">
+                                            <label class="form-check-label" for="blowoutStyle">Blowout Style</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="hydrationTreatment"
+                                                name="addons" value="hydrationTreatment">
+                                            <label class="form-check-label" for="hydrationTreatment">Hydration
+                                                Treatment</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-4 col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="signatureCut"
+                                                name="service1" value="signatureCut">
+                                            <label class="form-check-label" for="signatureCut">Signature Cut</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="curlWaveStyle"
+                                                name="service2" value="curlWaveStyle">
+                                            <label class="form-check-label" for="curlWaveStyle">Curl &amp; Wave
+                                                Style</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="scalpTherapy"
+                                                name="addons" value="scalpTherapy">
+                                            <label class="form-check-label" for="scalpTherapy">Scalp Therapy</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="premiumCut" name="service1"
+                                                value="premiumCut">
+                                            <label class="form-check-label" for="premiumCut">Premium Cut</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="sleekPressStyle"
+                                                name="service2" value="sleekPressStyle">
+                                            <label class="form-check-label" for="sleekPressStyle">Sleek Press
+                                                Style</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="hotTowelService"
+                                                name="addons" value="hotTowelService">
+                                            <label class="form-check-label" for="hotTowelService">Hot Towel
+                                                Service</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                        </div>
+
+                        <div id="collapseDate" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>What date and time?</p>
+                                <p>Ensures your barber is available.</p>
+                                <!-- Bootstrap has various input components. Some examples are given here: -->
+                                <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                                <div class="form-group row">
+                                    <label for="dateTimeInput" class="col-2 col-form-label">Date and Time</label>
+                                    <div class="col-10">
+                                        <input class="form-control" type="datetime-local" value="2026-02-10T13:45:00"
+                                            id="dateTimeInput">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your
+                                info</a>
+                        </div>
+                        <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Your information so we can contact you</p>
+                                <p>Form to enter name, email, phone</p>
+
+                                <form id="bookingForm">
+                                    <div class="form-group">
+                                        <label for="exampleInputName">Name</label>
+                                        <input type="text" class="form-control" id="nameInput" placeholder="Enter name">
+                                        <small id="nameHelp" class="form-text text-muted">Used to identify your appointment when you arrive.</small>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail"
+                                            aria-describedby="emailHelp" placeholder="Enter email">
+                                        <small id="emailHelp" class="form-text text-muted">We’ll send confirmation and reminders here.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPhone">Phone number</label>
+                                        <input type="text" class="form-control" id="phoneInput"
+                                            placeholder="Enter phone number">
+                                            <small id="phoneHelp" class="form-text text-muted">Needed in case we must contact you about schedule changes.</small>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confirmation Modal -->
+                <!-- Modal component: https://getbootstrap.com/docs/4.6/components/modal/ -->
+                <div class="modal fade" id="confirmModal">
+                    <div class="modal-dialog" role="document">
+
+                        <div class="modal-content">
+
+                            <h4 class="modal-title">Booking Confirmed!</h4>
+
+                            <div class="modal-body" id="confirmText"></div>
+
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+                        e.preventDefault(); // stop refresh
+
+                        // service1 - Haircut
+                        const service1 = document.querySelector('input[name="service1"]:checked');
+                        let service1Text = service1 ? document.querySelector('label[for="' + service1.id + '"]').innerText : "None";
+
+                        // service2 - Hairstyling
+                        const service2 = document.querySelector('input[name="service2"]:checked');
+                        let service2Text = service2 ? document.querySelector('label[for="' + service2.id + '"]').innerText : "None";
+
+                        // addons
+                        const addons = document.querySelectorAll('input[name="addons"]:checked');
+                        let addonList = [];
+                        addons.forEach(a => {
+                            addonList.push(document.querySelector('label[for="' + a.id + '"]').innerText);
+                        });
+                        if (addonList.length === 0) addonList.push("None");
+
+                        // date
+                        const date_old = document.getElementById("dateTimeInput").value || "Not chosen";
+                        if (date_old !== "Not chosen") {
+                            date = date_old.replace("T", " ");
+                        }
+
+                        // info
+                        const name = document.getElementById("nameInput").value || "Blank";
+                        const email = document.getElementById("exampleInputEmail").value || "Blank";
+                        const phone = document.getElementById("phoneInput").value || "Blank";
+
+                        // put text into modal
+                        document.getElementById("confirmText").innerHTML =
+                            "<strong>Haircut:</strong> " + service1Text + "<br>" +
+                            "<strong>Hairstyling:</strong> " + service2Text + "<br>" +
+                            "<strong>Add-ons:</strong> " + addonList.join(", ") + "<br>" +
+                            "<strong>Date and time:</strong> " + date + "<br>" +
+                            "<strong>Name:</strong> " + name + "<br>" +
+                            "<strong>Email:</strong> " + email + "<br>" +
+                            "<strong>Phone:</strong> " + phone;
+
+                        // open modal
+                        $('#confirmModal').modal('show');
+                    });
+                </script>
+
+                <!-- ===== FLOATING BOOK NOW BUTTON  ===== -->
+                <a class="floating-book-btn" href="#accordion">Book Now</a>
+
+                <!-- ===== FOOTER ===== -->
+                <footer class="site-footer">
+                    <div class="container py-4">
+                        <div class="row text-left">
+                            <div class="col-12 col-md-6">
+                                <h5 class="mb-2">LuxeSlice</h5>
+                                <p class="mb-1">Premium cuts, styling, and add-ons.</p>
+                                <small>© 2026 LuxeSlice. All rights reserved.</small>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-3 mt-md-0">
+                                <h6 class="mb-2">Quick links</h6>
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#accordion">Book Here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+</body>
+
+</html>

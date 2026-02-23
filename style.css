@@ -1,0 +1,180 @@
+/*Styling for the entire HTML page for a consistent look.*/
+html, body {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+h3, h4 {
+  font-weight: bold;
+}
+
+/*Styling for the tables.*/
+.table {
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;   
+  max-width: 700px; 
+  margin: 0 auto; 
+}
+
+.table th, .table td {
+  border: 1px solid #ccc;  
+  padding: 12px;
+}
+
+/*Styling for the services and pricing section.*/
+.services {
+  background-image: url("servicesbg.jpg"); 
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+  padding: 40px 0;           
+}
+
+/*Styling for the staff section.*/
+.staff {
+  background-image: url("staffbg.jpg"); 
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+  padding: 40px 0;           
+}
+
+/*Styling for the header in the staff section specfically.*/
+.staff h3 {
+    color: white;
+}
+
+/*Styling below done for the card components for staff members.*/
+.card-columns .card {
+    width: 260px !important; /*!important tag overrides the given CSS from bootstrap.*/
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card-columns .card.bg-warning,
+.card-columns .card.bg-danger {
+    background-color: #d4d4d4 !important;
+}
+
+.card-columns .card .card-img-top {
+    border: none;
+    border-radius: 0;
+    display: block;
+}
+
+.card-columns .card .btn-primary {
+    background-color: #616161;
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.25s ease;
+}
+
+/*Styling for the buttons inside cards.*/
+.card-columns .card .btn-primary:hover {
+    background-color: #222222;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Photo Gallery */
+.top-carousel {
+  position: relative;
+}
+
+.top-carousel-img {
+  height: 520px;
+  object-fit: cover;
+}
+
+.top-carousel-title {
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.top-carousel-subtitle {
+  margin-bottom: 14px;
+}
+
+.top-carousel-btn {
+  border-radius: 999px;
+  padding: 12px 18px;      
+  font-weight: 600;          
+  background: #616161;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+  border: none; 
+  outline: none; 
+}
+
+/*Redesign bootstrap button.*/
+.top-carousel-btn:hover,
+.top-carousel-btn:focus,
+.top-carousel-btn:active {
+  background: #616161;         
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22); 
+}
+
+
+/* Floating book button */
+.floating-book-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #616161; 
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+}
+
+.floating-book-btn:hover {
+  color: white;
+  text-decoration: none;
+  filter: brightness(0.95);
+}
+
+/* FOOTER */
+.site-footer {
+  background: #111;
+  color: #eaeaea;
+  margin-top: 40px;
+}
+
+.site-footer a {
+  color: #eaeaea;
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  filter: brightness(0.9);
+}
+
+.top-carousel-overlay {
+  background-image: url("staffbg.jpg"); 
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+  padding: 40px 0;
+  color: white;           
+}
+
