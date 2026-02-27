@@ -465,7 +465,7 @@
     </div>
 
     </div>
-    <div class="booking" id="booking"> <!-- Section with background image -->
+    <form class="booking" id="booking"> <!-- Section with background image -->
         <h3>🕮 Plan your Booking</h3>
         <br>
 
@@ -550,16 +550,14 @@
                 <label>ጸ Last Name:</label><br>
                 <input type="text"><br><br>
 
-                <label>✉ Email:</label><br>
-                <input type="email" required title="Enter a valid email address."><br><br>
-
                 <label>★ Phone Number (no space):</label><br>
                 <input 
+                id="phone"
                 type="text"
                 pattern="^\d{10}$"
                 required
-                title="Enter a valid phone number. Example: (613) 555-1234"
-                ><br><br>
+                >
+                <div id="phone-error" class="text-danger small"></div><br><br>
             </div>
 
             <br>
@@ -571,22 +569,31 @@
 
                 <label>★ Card Number (no space):</label><br>
                 <input 
+                id="card"
                 type="text"
                 pattern="^\d{16}$"
                 required
-                title="Enter a valid 16-digit card number."
-                ><br><br>
+                >
+                <div id="card-error" class="text-danger small"></div><br><br>
 
                 <label>𝄜 Expiry Date:</label><br>
-                <input type="text" placeholder="MM/YY"><br><br>
+                <input
+                    id="expiry"
+                    type="text"
+                    placeholder="MM/YY"
+                    pattern="^(0[1-9]|1[0-2])\/\d{2}$"
+                    required
+                >
+                <div id="expiry-error" class="text-danger small"></div><br><br>
 
                 <label>★ CVC:</label><br>
                 <input 
+                id="cvc"
                 type="text"
                 pattern="^\d{3}$"
                 required
-                title="Enter a valid 3-digit CVC."
-                ><br><br>
+                >
+                <div id="cvc-error" class="text-danger small"></div><br><br>
 
                 <label>ጸ Name on Card:</label><br>
                 <input type="text"><br><br>
@@ -596,14 +603,14 @@
 
             <!-- Book Now Button -->
             <div class="booking-section" id="booking-submit">
-                <button type="submit" id="submitBtn" disabled>Make Booking</button>
+                <button type="submit" id="submitBtn">Make Booking</button>
             </div>
 
         </div>
         <br>
         <br>
         <br>
-    </div>
+    </form>
 
     <!-- ===== FLOATING BOOK NOW BUTTON  ===== -->
     <a class="floating-book-btn" href="#booking">🕮 Book Now</a>
@@ -630,6 +637,35 @@
     </footer>
 
     <script>
+    function wireValidation(inputId, errorId, message) {
+        const input = document.getElementById(inputId);
+        const error = document.getElementById(errorId);
+
+        input.addEventListener("input", () => {
+        // if empty: show nothing
+        if (input.value.trim() === "") {
+            error.textContent = "";
+            return;
+        }
+
+        // if invalid: show message
+        if (!input.checkValidity()) {
+            error.textContent = message;
+        } else {
+            // if valid: clear message
+            error.textContent = "";
+        }
+        });
+    }
+
+    wireValidation("phone", "phone-error", "Phone number must be exactly 10 digits (no spaces).");
+    wireValidation("card", "card-error", "Card number must be exactly 16 digits (no spaces).");
+    wireValidation("expiry", "expiry-error", "Expiry date must be in MM/YY format (e.g., 12/25).");
+    wireValidation("cvc", "cvc-error", "CVC must be exactly 3 digits (no spaces).");
+
+    </script>
+
+    <script>
         const form = document.getElementById("booking");
         const submitBtn = document.getElementById("submitBtn");
 
@@ -650,6 +686,37 @@
         // Check everytime there is an input
         inputs.forEach(input => {
             input.addEventListener("input", checkFormValidity);
+        });
+    </script>
+
+    <!-- ===== CONFIRMATION MODAL ===== -->
+    <div class="modal fade" id="confirmModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center p-4">
+                    <h4>Your reservation is booked! 🎉</h4>
+                </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const bookingform = document.getElementById("booking");
+
+        bookingform.addEventListener("submit", function (e) {
+            if (!bookingform.checkValidity()) {
+            e.preventDefault();
+            bookingform.reportValidity();
+            return;
+            }
+
+            e.preventDefault();
+            $("#confirmModal").modal("show");
         });
     </script>
 
