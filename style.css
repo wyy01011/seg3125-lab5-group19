@@ -58,6 +58,7 @@ h3, h4 {
   padding: 40px 0;           
 }
 
+
 /*Styling for the staff section.*/
 .staff {
   background-image: url("staffbg.jpg"); 
@@ -65,6 +66,14 @@ h3, h4 {
   background-position: center; 
   background-repeat: no-repeat;
   padding: 40px 0;           
+}
+
+/* Styling for the booking section. */
+.booking {
+    background-image: url('servicesbg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0 0 0; 
 }
 
 /*Styling for the header in the staff section specfically.*/
@@ -179,7 +188,7 @@ h3, h4 {
 .site-footer {
   background: #111;
   color: #eaeaea;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 .site-footer a {
@@ -204,4 +213,43 @@ h3, h4 {
     display: flex;
     justify-content: center;
     gap: 2.5rem; 
+}
+
+/*Styling for the booking container's section.*/
+.booking-container {
+    background: rgb(252, 252, 252);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/*Styling for the numbers in the booking section.*/
+.numberStep {
+    display: inline-block;
+    background: #dddddd;        
+    color: rgb(0, 0, 0);
+    width: 28px;
+    height: 28px;
+    line-height: 28px;      
+    text-align: center;
+    border-radius: 4px;      
+    margin-right: 10px;      
+    font-weight: bold;
+}
+
+/*Styling for the booking elements in the booking section.*/
+.booking-section input[type="text"],
+.booking-section input[type="email"],
+.booking-section input[type="date"],
+.booking-section select {
+    padding: 12px 15px;      
+    width: 100%;            
+    max-width: 400px;       
+    border-radius: 10px;    
+    border: none;           
+    background-color: #f4f4f4;
+    outline: none;           
+    box-sizing: border-box; 
+    font-size: 16px;         
 }
