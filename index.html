@@ -551,7 +551,15 @@
                 <input type="text"><br><br>
 
                 <label>✉ Email:</label><br>
-                <input type="email"><br><br>
+                <input type="email" required title="Enter a valid email address."><br><br>
+
+                <label>★ Phone Number (no space):</label><br>
+                <input 
+                type="text"
+                pattern="^\d{10}$"
+                required
+                title="Enter a valid phone number. Example: (613) 555-1234"
+                ><br><br>
             </div>
 
             <br>
@@ -561,14 +569,24 @@
             <div class="booking-section" id="booking-payment">
                 <h4><span class="numberStep">$</span>Your Payment Information</h4>
 
-                <label>★ Card Number:</label><br>
-                <input type="text" pattern="[0-9]{16}" required title="Enter a 16-digit number with no spaces."><br><br>
+                <label>★ Card Number (no space):</label><br>
+                <input 
+                type="text"
+                pattern="^\d{16}$"
+                required
+                title="Enter a valid 16-digit card number."
+                ><br><br>
 
                 <label>𝄜 Expiry Date:</label><br>
                 <input type="text" placeholder="MM/YY"><br><br>
 
                 <label>★ CVC:</label><br>
-                <input type="text"><br><br>
+                <input 
+                type="text"
+                pattern="^\d{3}$"
+                required
+                title="Enter a valid 3-digit CVC."
+                ><br><br>
 
                 <label>ጸ Name on Card:</label><br>
                 <input type="text"><br><br>
