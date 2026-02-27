@@ -9,3 +9,7 @@ References:
 - Staff member profiles and pictures retrieved from existing Barbershop website: https://losbarberosclassicbarbershop.com/barbers/
 - Haircut images retrieved from a top 25 haircut list: https://didahairstudio.com/blog/mens-hairstyles-2026-trending-styles-queens-nyc
 - Hairstyle images retrieved from a top 36 hairstyle list: https://www.styleseat.com/blog/short-hairstyles-men/
+
+Added Icons to 2 extra sections of our choice:
+- Choosing a Date and Time (Booking)
+- Your Information (Booking)
