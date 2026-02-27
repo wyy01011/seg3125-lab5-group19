@@ -18,14 +18,15 @@ html, body {
     z-index: 999;
 }
 
-/* Prevent content from hiding under the fixed header */
 body {
-    padding-top: 60px; /* adjust if your header is taller/shorter */
+    padding-top: 60px; 
 }
 
-/* Smooth scrolling animation */
+/*Styling for the navigation header scrolling.*/
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 200px;
+
 }
 
 .container {
