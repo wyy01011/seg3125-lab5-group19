@@ -494,7 +494,7 @@
 
                 <br>
                 <h5>ጸ Choose your Barber for your Session</h5>
-                <select id="booking-time">
+                <select id="barber-select">
                     <option value="">Select a Barber</option>
                     <option>Edwin</option>
                     <option>Drew</option>
@@ -596,7 +596,7 @@
 
             <!-- Book Now Button -->
             <div class="booking-section" id="booking-submit">
-                <button type="submit">Make Booking</button>
+                <button type="submit" id="submitBtn" disabled>Make Booking</button>
             </div>
 
         </div>
@@ -629,8 +629,33 @@
         </div>
     </footer>
 
+    <script>
+        const form = document.getElementById("booking");
+        const submitBtn = document.getElementById("submitBtn");
+
+        const inputs = form.querySelectorAll("input");
+
+        function checkFormValidity() {
+            let allFilled = true;
+
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    allFilled = false;
+                }
+            });
+
+            submitBtn.disabled = !allFilled;
+        }
+
+        // Check everytime there is an input
+        inputs.forEach(input => {
+            input.addEventListener("input", checkFormValidity);
+        });
+    </script>
+
     <!--This script was created with help from https://www.w3schools.com/js/js_dates.asp-->
     <script>
+        
         //Get the current date.
         const today = new Date();
 
@@ -647,6 +672,8 @@
         //Set the min attribute from the date.
         document.getElementById('booking-date').setAttribute('min', formattedToday);
     </script>
+
+   
 </body>
 
 </html>
