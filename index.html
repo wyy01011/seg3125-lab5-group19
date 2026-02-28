@@ -76,128 +76,144 @@
     <div class="services" id="services"> <!--Section to list out all services and their prices.-->
         <h3>𖥈 Services & Pricing</h3>
         <br>
-        <div class="table-responsive"> <!--Holds a table created from bootstrap componenets. External css added.-->
-            <h4>Haircuts</h4>
-            <p>All haircut sessions include a consultation session, shampoo & conditioner, a stress-relieving scalp
-                massage, and a complimentary slice of Cheesecake.</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Types of Haircuts</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Classic Cut</td>
-                        <td>
-                            A clean classic haircut that focuses on <br>shortning hair length and trimming the
-                            edges.<br>
-                            <img src="classiccut.jpg" alt="Classic Cut" width="120" height="120">
-                        </td>
-                        <td>$19.99</td>
-                    </tr>
-                    <tr>
-                        <td>Signature Cut</td>
-                        <td>
-                            Our signature haircut style not found <br>anywhere else! Enjoy a modern and unique look.<br>
-                            <img src="signaturecut.jpg" alt="Signature Cut" width="120" height="120">
-                        </td>
-                        <td>$24.99</td>
-                    </tr>
-                    <tr>
-                        <td>Premium Cut</td>
-                        <td>
-                            A premium haircut session that will <br>take in all your personal requests with no
-                            exceptions.<br>
-                            <img src="premiumcut.jpg" alt="Premium Cut" width="120" height="120">
-                        </td>
-                        <td>$30.99</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <div class="table-responsive">
-            <h4>Hairstyling</h4>
-            <p>Style off your hair after a fresh cut or walk in! Additional charges apply.</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Types of Stylings</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Blowout Style</td>
-                        <td>
-                            A smooth style with heat styling to <br>add lift, body, and movement. Bouncy finish.<br>
-                            <img src="blowoutstyle.jpg" alt="Blowout Style" width="120" height="120">
-                        </td>
-                        <td>$12.99</td>
-                    </tr>
-                    <tr>
-                        <td>Curl & Wave Style</td>
-                        <td>
-                            A soft and textured look that features <br>defined curls or loose waves for good flow.<br>
-                            <img src="curlstyle.jpg" alt="Curl Style" width="120" height="120">
-                        </td>
-                        <td>$13.99</td>
-                    </tr>
-                    <tr>
-                        <td>Sleek Press Style</td>
-                        <td>
-                            A silky and straight style with a <br>glossy style that turns into a nice elegant look.<br>
-                            <img src="sleekstyle.jpg" alt="Sleek Style" width="120" height="120">
-                        </td>
-                        <td>$25.99</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <div class="table-responsive">
-            <h4>Add Ons</h4>
-            <p>Add on additional treatments and services to your haircuts or hairstyling appointments.</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Types of Add Ons</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Hydration Treatment</td>
-                        <td>
-                            A deep-moisturizing service that <br>restores softness and shine to dry or damaged hair.<br>
-                            <img src="hydration.png" alt="Blowout Style" width="120" height="120">
-                        </td>
-                        <td>$16.99</td>
-                    </tr>
-                    <tr>
-                        <td>Scalp Therapy</td>
-                        <td>
-                            A targeted treatment that soothes <br>irritation and that will remove buildup.<br>
-                            <img src="scalp.png" alt="Curl Style" width="120" height="120">
-                        </td>
-                        <td>$18.99</td>
-                    </tr>
-                    <tr>
-                        <td>Hot Towel Service</td>
-                        <td>
-                            A relaxing warm towel treatment <br>that will open pores and enhance comfort after a
-                            haircut.<br>
-                            <img src="towel.jpg" alt="Sleek Style" width="120" height="120">
-                        </td>
-                        <td>$14.99</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="container p-3">
+            <div class="row mx-auto justify-content-center" style="max-width: 1000px;">
+
+                <div class="col-12 col-sm-6 col-md-4 mb-4"> <!--Class name to format the card.-->
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="classiccut.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Classic Cut</h4>
+                            <p class="card-text"> <!--Section description and price.-->
+                                A clean classic haircut that<br>
+                                focuses on shortning hair length<br>
+                                and trimming the edges.
+                            </p>
+                            <a class="btn btn-primary" href="#booking" onclick="selectClassicCut()">Select Service
+                                ($19.99)</a> <!--Card button to add the service and show the user.-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="signaturecut.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Signature Cut</h4>
+                            <p class="card-text">Our signature haircut style not<br>
+                                found anywhere else! Enjoy a<br>
+                                modern and unique look.</p>
+                            <a class="btn btn-primary" href="#booking" onclick="selectSignatureCut()">Select Service ($24.99)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="premiumcut.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Premium Cut</h4>
+                            <p class="card-text">A premium haircut session that
+                                <br>
+                                will take in all your personal<br>
+                                requests with no exceptions.
+                            </p>
+                            <a class="btn btn-primary" href="#booking" onclick="selectPremiumCut()">Select Service ($30.99)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="blowoutstyle.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Blowout Style</h4>
+                            <p class="card-text">A smooth style with heat styling
+                                <br>
+                                to add lift, body, and<br>
+                                movement. Bouncy finish.
+                            </p>
+                            <a class="btn btn-primary" href="#booking" onclick="selectBlowoutStyle()">Select Service ($12.99)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="curlstyle.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Curl & Wave Style</h4>
+                            <p class="card-text">A soft and textured look that
+                                <br>
+                                features defined curls or loose<br>
+                                loose waves for good flow.
+                            </p>
+                            <a class="btn btn-primary" href="#booking" onclick="selectCurlStyle()">Select Service ($13.99)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="sleekstyle.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Sleek Press Style</h4>
+                            <p class="card-text">A silky and straight style with
+                                <br>
+                                a glossy style that turns<br>
+                                into a nice elegant look.
+                            </p>
+                            <a class="btn btn-primary" href="#booking" onclick="selectSleekStyle()">Select Service ($25.99)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="hydration.png" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Hydration Treatment</h4>
+                            <p class="card-text">A deep-moisturizing service that
+                                <br>
+                                restores softness and shine<br>
+                                to dry or damaged hair.
+                            </p>
+                            <a class="btn btn-primary" href="#booking" onclick="selectHydrationAddOn()">Select Add On ($16.99)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="scalp.png" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Scalp Therapy</h4>
+                            <p class="card-text">A targeted treatment that soothes
+                                <br>
+                                irritation and that will<br>
+                                remove buildup.
+                            </p>
+                            <a class="btn btn-primary" href="#booking" onclick="selectScalpAddOn()">Select Add On ($18.99)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card bg-danger text-center">
+                        <img class="card-img-top" src="towel.jpg" alt="Card image">
+                        <div class="card-body">
+                            <h4 class="card-title">Hot Towel Service</h4>
+                            <p class="card-text">A relaxing warm towel treatment
+                                <br>
+                                that will open pores and<br>
+                                enhance comfort after a haircut.
+                            </p>
+                            <a class="btn btn-primary" href="#booking" onclick="selectTowelAddOn()">Select Add On ($14.99)</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </div>
@@ -479,21 +495,30 @@
                 <h4><span class="numberStep">1</span>Choose your Services</h4>
 
                 <h5>✄ Choose a Haircut Session</h5>
-                <label><input type="radio" name="haircut" value="basic"> Classic Cut - $19.99</label><br>
-                <label><input type="radio" name="haircut" value="fade"> Signature Cut - $24.99</label><br>
-                <label><input type="radio" name="haircut" value="scissor"> Premium Cut - $30.99</label><br>
+                <label><input type="radio" id="classiccutOption" name="haircut" value="basic"> Classic Cut -
+                    $19.99</label><br>
+                <label><input type="radio" id="signaturecutOption" name="haircut" value="fade"> Signature Cut -
+                    $24.99</label><br>
+                <label><input type="radio" id="premiumcutOption" name="haircut" value="scissor"> Premium Cut -
+                    $30.99</label><br>
                 <label><input type="radio" name="haircut" value="premium"> No Haircut Required</label><br><br>
 
                 <h5>❀ Choose a Hairstyling Session</h5>
-                <label><input type="radio" name="style" value="classic"> Blowout Style - $12.99</label><br>
-                <label><input type="radio" name="style" value="modern"> Curl & Wave Style - $13.99</label><br>
-                <label><input type="radio" name="style" value="texture"> Sleek Press Style - $25.99</label><br>
+                <label><input type="radio" id="blowoutstyleOption" name="style" value="classic"> Blowout Style -
+                    $12.99</label><br>
+                <label><input type="radio" id="curlstyleOption" name="style" value="modern"> Curl & Wave Style -
+                    $13.99</label><br>
+                <label><input type="radio" id="sleekstyleOption" name="style" value="texture"> Sleek Press Style -
+                    $25.99</label><br>
                 <label><input type="radio" name="style" value="slick"> No Hairstyling Required</label><br><br>
 
                 <h5>⟡ Choose Add Ons for your Session</h5>
-                <label><input type="checkbox" name="addon" value="beard"> Hydration Treatment - $16.99</label><br>
-                <label><input type="checkbox" name="addon" value="wash"> Scalp Therapy - $18.99</label><br>
-                <label><input type="checkbox" name="addon" value="hotTowel"> Hot Towel Service - $14.99</label><br>
+                <label><input type="checkbox" id="hydrationOption" name="addon" value="beard"> Hydration Treatment -
+                    $16.99</label><br>
+                <label><input type="checkbox" id="scalpOption" name="addon" value="wash"> Scalp Therapy -
+                    $18.99</label><br>
+                <label><input type="checkbox" id="towelOption" name="addon" value="hotTowel"> Hot Towel Service -
+                    $14.99</label><br>
 
                 <br>
                 <h5>ጸ Choose your Barber for your Session</h5>
@@ -554,12 +579,7 @@
                 <input type="text"><br><br>
 
                 <label>★ Phone Number (no space):</label><br>
-                <input 
-                id="phone"
-                type="text"
-                pattern="^\d{10}$"
-                required
-                >
+                <input id="phone" type="text" pattern="^\d{10}$" required>
                 <div id="phone-error" class="text-danger small"></div><br><br>
             </div>
 
@@ -571,31 +591,15 @@
                 <h4><span class="numberStep">$</span>Your Payment Information</h4>
 
                 <label>★ Card Number (no space):</label><br>
-                <input 
-                id="card"
-                type="text"
-                pattern="^\d{16}$"
-                required
-                >
+                <input id="card" type="text" pattern="^\d{16}$" required>
                 <div id="card-error" class="text-danger small"></div><br><br>
 
                 <label>𝄜 Expiry Date:</label><br>
-                <input
-                    id="expiry"
-                    type="text"
-                    placeholder="MM/YY"
-                    pattern="^(0[1-9]|1[0-2])\/\d{2}$"
-                    required
-                >
+                <input id="expiry" type="text" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/\d{2}$" required>
                 <div id="expiry-error" class="text-danger small"></div><br><br>
 
                 <label>★ CVC:</label><br>
-                <input 
-                id="cvc"
-                type="text"
-                pattern="^\d{3}$"
-                required
-                >
+                <input id="cvc" type="text" pattern="^\d{3}$" required>
                 <div id="cvc-error" class="text-danger small"></div><br><br>
 
                 <label>ጸ Name on Card:</label><br>
@@ -640,31 +644,31 @@
     </footer>
 
     <script>
-    function wireValidation(inputId, errorId, message) {
-        const input = document.getElementById(inputId);
-        const error = document.getElementById(errorId);
+        function wireValidation(inputId, errorId, message) {
+            const input = document.getElementById(inputId);
+            const error = document.getElementById(errorId);
 
-        input.addEventListener("input", () => {
-        // if empty: show nothing
-        if (input.value.trim() === "") {
-            error.textContent = "";
-            return;
+            input.addEventListener("input", () => {
+                // if empty: show nothing
+                if (input.value.trim() === "") {
+                    error.textContent = "";
+                    return;
+                }
+
+                // if invalid: show message
+                if (!input.checkValidity()) {
+                    error.textContent = message;
+                } else {
+                    // if valid: clear message
+                    error.textContent = "";
+                }
+            });
         }
 
-        // if invalid: show message
-        if (!input.checkValidity()) {
-            error.textContent = message;
-        } else {
-            // if valid: clear message
-            error.textContent = "";
-        }
-        });
-    }
-
-    wireValidation("phone", "phone-error", "Phone number must be exactly 10 digits (no spaces).");
-    wireValidation("card", "card-error", "Card number must be exactly 16 digits (no spaces).");
-    wireValidation("expiry", "expiry-error", "Expiry date must be in MM/YY format (e.g., 12/25).");
-    wireValidation("cvc", "cvc-error", "CVC must be exactly 3 digits (no spaces).");
+        wireValidation("phone", "phone-error", "Phone number must be exactly 10 digits (no spaces).");
+        wireValidation("card", "card-error", "Card number must be exactly 16 digits (no spaces).");
+        wireValidation("expiry", "expiry-error", "Expiry date must be in MM/YY format (e.g., 12/25).");
+        wireValidation("cvc", "cvc-error", "CVC must be exactly 3 digits (no spaces).");
 
     </script>
 
@@ -700,9 +704,9 @@
                     <h4>Your reservation is booked! 🎉</h4>
                 </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
 
             </div>
         </div>
@@ -713,9 +717,9 @@
 
         bookingform.addEventListener("submit", function (e) {
             if (!bookingform.checkValidity()) {
-            e.preventDefault();
-            bookingform.reportValidity();
-            return;
+                e.preventDefault();
+                bookingform.reportValidity();
+                return;
             }
 
             e.preventDefault();
@@ -725,13 +729,13 @@
 
     <!--This script was created with help from https://www.w3schools.com/js/js_dates.asp-->
     <script>
-        
+
         //Get the current date.
         const today = new Date();
 
         //Format the date.
         const yyyy = today.getFullYear();
-        let mm = today.getMonth() + 1; 
+        let mm = today.getMonth() + 1;
         let dd = today.getDate();
 
         if (dd < 10) dd = '0' + dd;
@@ -744,72 +748,103 @@
     </script>
 
     <script>
-    // 0=Sun ... 6=Sat
-    const schedule = {
-        Edwin:  { days: [1,2,3,4,5], start: "09:00", end: "15:00" },
-        Drew:   { days: [3,4,5],     start: "09:00", end: "15:00" },
-        Samuel: { days: [2,3,4,5,6], start: "13:00", end: "17:00" },
-        Joshua: { days: [1,2,3,4],   start: "12:00", end: "16:00" },
-        Roger:  { days: [6],         start: "09:00", end: "17:00" },
-        Miguel: { days: [1,5],       start: "10:00", end: "14:00" }
-    };
+        // 0=Sun ... 6=Sat
+        const schedule = {
+            Edwin: { days: [1, 2, 3, 4, 5], start: "09:00", end: "15:00" },
+            Drew: { days: [3, 4, 5], start: "09:00", end: "15:00" },
+            Samuel: { days: [2, 3, 4, 5, 6], start: "13:00", end: "17:00" },
+            Joshua: { days: [1, 2, 3, 4], start: "12:00", end: "16:00" },
+            Roger: { days: [6], start: "09:00", end: "17:00" },
+            Miguel: { days: [1, 5], start: "10:00", end: "14:00" }
+        };
 
-    const staffEl = document.getElementById("barber-select");
-    const dateEl  = document.getElementById("booking-date");
-    const timeEl  = document.getElementById("booking-time");
+        const staffEl = document.getElementById("barber-select");
+        const dateEl = document.getElementById("booking-date");
+        const timeEl = document.getElementById("booking-time");
 
-    // Get a clean list of all real time values in your dropdown
-    const allTimes = [...timeEl.querySelectorAll("option")]
-        .map(o => o.value || o.textContent)
-        .filter(t => t && t !== "Select a Time");
+        // Get a clean list of all real time values in your dropdown
+        const allTimes = [...timeEl.querySelectorAll("option")]
+            .map(o => o.value || o.textContent)
+            .filter(t => t && t !== "Select a Time");
 
-    const toMin = t => {
-        const [h,m] = t.split(":").map(Number);
-        return h * 60 + m;
-    };
+        const toMin = t => {
+            const [h, m] = t.split(":").map(Number);
+            return h * 60 + m;
+        };
 
-    function filterTimes() {
-        const s = schedule[staffEl.value];
-
-        timeEl.innerHTML = `<option value="">Select a Time</option>`;
-
-        if (!s) { // no staff selected -> show all
-        allTimes.forEach(t => timeEl.insertAdjacentHTML("beforeend", `<option>${t}</option>`));
-        return;
-        }
-
-        const start = toMin(s.start), end = toMin(s.end);
-        allTimes.forEach(t => {
-        const tm = toMin(t);
-        if (tm >= start && tm <= end) timeEl.insertAdjacentHTML("beforeend", `<option>${t}</option>`);
-        });
-    }
-
-    const fp = flatpickr(dateEl, {
-        dateFormat: "Y-m-d",
-        minDate: "today",
-        disable: [
-        (date) => {
+        function filterTimes() {
             const s = schedule[staffEl.value];
-            if (!s) return false; // no staff -> allow all days
-            return !s.days.includes(date.getDay()); // off-days disabled (greyed out)
+
+            timeEl.innerHTML = `<option value="">Select a Time</option>`;
+
+            if (!s) { // no staff selected -> show all
+                allTimes.forEach(t => timeEl.insertAdjacentHTML("beforeend", `<option>${t}</option>`));
+                return;
+            }
+
+            const start = toMin(s.start), end = toMin(s.end);
+            allTimes.forEach(t => {
+                const tm = toMin(t);
+                if (tm >= start && tm <= end) timeEl.insertAdjacentHTML("beforeend", `<option>${t}</option>`);
+            });
         }
-        ],
-        onChange: filterTimes
-    });
 
-    staffEl.addEventListener("change", () => {
-        fp.clear(); // clear date when staff changes
-        fp.redraw(); // recompute disabled days
-        timeEl.value = "";
-        filterTimes(); // update available times
-    });
+        const fp = flatpickr(dateEl, {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+            disable: [
+                (date) => {
+                    const s = schedule[staffEl.value];
+                    if (!s) return false; // no staff -> allow all days
+                    return !s.days.includes(date.getDay()); // off-days disabled (greyed out)
+                }
+            ],
+            onChange: filterTimes
+        });
 
-    // init
-    filterTimes();
-</script>
+        staffEl.addEventListener("change", () => {
+            fp.clear(); // clear date when staff changes
+            fp.redraw(); // recompute disabled days
+            timeEl.value = "";
+            filterTimes(); // update available times
+        });
 
-   
+        // init
+        filterTimes();
+    </script>
+
+    <script>
+        //Script with functions to pick a service for the user when it is selected from the services section
+        function selectClassicCut() {
+            document.getElementById("classiccutOption").checked = true;
+        }
+        function selectSignatureCut() {
+            document.getElementById("signaturecutOption").checked = true;
+        }
+        function selectPremiumCut() {
+            document.getElementById("premiumcutOption").checked = true;
+        }
+        function selectBlowoutStyle() {
+            document.getElementById("blowoutstyleOption").checked = true;
+        }
+        function selectCurlStyle() {
+            document.getElementById("curlstyleOption").checked = true;
+        }
+        function selectSleekStyle() {
+            document.getElementById("sleekstyleOption").checked = true;
+        }
+        function selectHydrationAddOn() {
+            document.getElementById("hydrationOption").checked = true;
+        }
+        function selectScalpAddOn() {
+            document.getElementById("scalpOption").checked = true;
+        }
+        function selectTowelAddOn() {
+            document.getElementById("towelOption").checked = true;
+        }
+    </script>
+
+
 </body>
 
 </html>

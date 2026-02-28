@@ -113,6 +113,37 @@ h3, h4 {
     transition: 0.25s ease;
 }
 
+/*Styling below done for the card components for services.*/
+.services .card {
+    width: 260px !important; /*!important tag overrides the given CSS from bootstrap.*/
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.services .card.bg-warning,
+.services .card.bg-danger {
+    background-color: #d4d4d4 !important;
+}
+
+.services .card .card-img-top {
+    border: none;
+    border-radius: 0;
+    display: block;
+}
+
+.services .card .btn-primary {
+    background-color: #616161;
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.25s ease;
+}
+
 /*Styling for the buttons inside cards.*/
 .staff .card .btn-primary:hover {
     background-color: #222222;
