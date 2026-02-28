@@ -20,8 +20,10 @@
 
     <div class="luxeHeader">
         <div class="top-carousel-overlay">
-            <h1 class="top-carousel-title">LuxeSlice</h1>
-            <p class="top-carousel-subtitle">High quality cuts paired with high quality bites.</p>
+            <div class="brandBlock">
+                <h1 class="top-carousel-title">LuxeSlice</h1>
+                <p class="top-carousel-subtitle">High quality cuts paired with high quality bites.</p>
+            </div>
             <div class="navButtons">
                 <a class="btn btn-primary top-carousel-btn" href="#services">𖥈 Our Services</a>
                 <a class="btn btn-primary top-carousel-btn" href="#staff">✂ Our Staff</a>
@@ -498,17 +500,17 @@
                 <label><input type="radio" id="classiccutOption" name="haircut" value="basic" required
                     data-tip="Choose ONE haircut option so we can prepare the service and time."> Classic Cut -
                     $19.99<span class="picked">✓ Selected</span></label><br>
-                <label><input type="radio" id="signaturecutOption" name="haircut" value="fade" required
+                <label><input type="radio" id="signaturecutOption" name="haircut" value="fade" 
                     data-tip="Choose ONE haircut option so we can prepare the service and time."> Signature Cut -
                     $24.99<span class="picked">✓ Selected</span></label><br>
-                <label><input type="radio" id="premiumcutOption" name="haircut" value="scissor" required
+                <label><input type="radio" id="premiumcutOption" name="haircut" value="scissor" 
                     data-tip="Choose ONE haircut option so we can prepare the service and time."> Premium Cut -
                     $30.99<span class="picked">✓ Selected</span></label><br>
                 <label><input type="radio" name="haircut" value="premium"> No Haircut Required
                     <span class="picked">✓ Selected</span></label><br><br>
 
                 <h5>❀ Choose a Hairstyling Session</h5>
-                <label><input type="radio" id="blowoutstyleOption" name="style" value="classic"
+                <label><input type="radio" id="blowoutstyleOption" name="style" value="classic" required
                     data-tip="Choose ONE styling option so we can allocate the right time and tools."> Blowout Style -
                     $12.99<span class="picked">✓ Selected</span></label><br>
                 <label><input type="radio" id="curlstyleOption" name="style" value="modern"
@@ -663,7 +665,7 @@
 
             <!-- Book Now Button -->
             <div class="booking-section" id="booking-submit">
-                <button type="submit" id="submitBtn">Make Booking</button>
+                <button type="submit" id="submitBtn" disabled>Make Booking</button>
             </div>
 
         </div>
@@ -729,24 +731,15 @@
         const form = document.getElementById("booking");
         const submitBtn = document.getElementById("submitBtn");
 
-        const inputs = form.querySelectorAll("input");
-
-        function checkFormValidity() {
-            let allFilled = true;
-
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    allFilled = false;
-                }
-            });
-
-            submitBtn.disabled = !allFilled;
+        function updateSubmitState(){
+            submitBtn.disabled =!form.checkValidity();
         }
 
-        // Check everytime there is an input
-        inputs.forEach(input => {
-            input.addEventListener("input", checkFormValidity);
-        });
+        form.addEventListener("input", updateSubmitState);
+        form.addEventListener("change", updateSubmitState);
+        form.addEventListener("blur", updateSubmitState, true);
+
+        updateSubmitState();
     </script>
 
     <!-- ===== CONFIRMATION MODAL ===== -->
