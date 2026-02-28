@@ -495,35 +495,47 @@
                 <h4><span class="numberStep">1</span>Choose your Services</h4>
 
                 <h5>✄ Choose a Haircut Session</h5>
-                <label><input type="radio" id="classiccutOption" name="haircut" value="basic"> Classic Cut -
-                    $19.99</label><br>
-                <label><input type="radio" id="signaturecutOption" name="haircut" value="fade"> Signature Cut -
-                    $24.99</label><br>
-                <label><input type="radio" id="premiumcutOption" name="haircut" value="scissor"> Premium Cut -
-                    $30.99</label><br>
-                <label><input type="radio" name="haircut" value="premium"> No Haircut Required</label><br><br>
+                <label><input type="radio" id="classiccutOption" name="haircut" value="basic" required
+                    data-tip="Choose ONE haircut option so we can prepare the service and time."> Classic Cut -
+                    $19.99<span class="picked">✓ Selected</span></label><br>
+                <label><input type="radio" id="signaturecutOption" name="haircut" value="fade" required
+                    data-tip="Choose ONE haircut option so we can prepare the service and time."> Signature Cut -
+                    $24.99<span class="picked">✓ Selected</span></label><br>
+                <label><input type="radio" id="premiumcutOption" name="haircut" value="scissor" required
+                    data-tip="Choose ONE haircut option so we can prepare the service and time."> Premium Cut -
+                    $30.99<span class="picked">✓ Selected</span></label><br>
+                <label><input type="radio" name="haircut" value="premium"> No Haircut Required
+                    <span class="picked">✓ Selected</span></label><br><br>
 
                 <h5>❀ Choose a Hairstyling Session</h5>
-                <label><input type="radio" id="blowoutstyleOption" name="style" value="classic"> Blowout Style -
-                    $12.99</label><br>
-                <label><input type="radio" id="curlstyleOption" name="style" value="modern"> Curl & Wave Style -
-                    $13.99</label><br>
-                <label><input type="radio" id="sleekstyleOption" name="style" value="texture"> Sleek Press Style -
-                    $25.99</label><br>
-                <label><input type="radio" name="style" value="slick"> No Hairstyling Required</label><br><br>
+                <label><input type="radio" id="blowoutstyleOption" name="style" value="classic"
+                    data-tip="Choose ONE styling option so we can allocate the right time and tools."> Blowout Style -
+                    $12.99<span class="picked">✓ Selected</span></label><br>
+                <label><input type="radio" id="curlstyleOption" name="style" value="modern"
+                    data-tip="Choose ONE styling option so we can allocate the right time and tools."> Curl & Wave Style -
+                    $13.99<span class="picked">✓ Selected</span></label><br>
+                <label><input type="radio" id="sleekstyleOption" name="style" value="texture"
+                    data-tip="Choose ONE styling option so we can allocate the right time and tools."> Sleek Press Style -
+                    $25.99<span class="picked">✓ Selected</span></label><br>
+                <label><input type="radio" name="style" value="slick"> No Hairstyling Required
+                    <span class="picked">✓ Selected</span></label><br><br>
 
                 <h5>⟡ Choose Add Ons for your Session</h5>
-                <label><input type="checkbox" id="hydrationOption" name="addon" value="beard"> Hydration Treatment -
-                    $16.99</label><br>
-                <label><input type="checkbox" id="scalpOption" name="addon" value="wash"> Scalp Therapy -
-                    $18.99</label><br>
-                <label><input type="checkbox" id="towelOption" name="addon" value="hotTowel"> Hot Towel Service -
-                    $14.99</label><br>
+                <label><input type="checkbox" id="hydrationOption" name="addon" value="beard"
+                    data-tip="Optional add-on. Select only if you want this included."> Hydration Treatment -
+                    $16.99<span class="picked">✓ Added</span></label><br>
+                <label><input type="checkbox" id="scalpOption" name="addon" value="wash"
+                    data-tip="Optional add-on. Select only if you want this included."> Scalp Therapy -
+                    $18.99<span class="picked">✓ Added</span></label><br>
+                <label><input type="checkbox" id="towelOption" name="addon" value="hotTowel"
+                    data-tip="Optional add-on. Select only if you want this included."> Hot Towel Service -
+                    $14.99<span class="picked">✓ Added</span></label><br>
 
                 <br>
                 <h5>ጸ Choose your Barber for your Session</h5>
-                <select id="barber-select">
-                    <option value="">Select a Barber</option>
+                <select id="barber-select" required
+                    data-tip="Choose a barber so we can show their available days and times.">
+                    <option value="" disabled selected>Select a Barber</option>
                     <option>Edwin</option>
                     <option>Drew</option>
                     <option>Samuel</option>
@@ -531,6 +543,8 @@
                     <option>Roger</option>
                     <option>Miguel</option>
                 </select>
+                <p class="error-msg">Please select a barber.</p>
+                <p class="valid-msg">Barber selected.</p>
             </div>
 
             <br>
@@ -541,11 +555,16 @@
                 <h4><span class="numberStep">2</span>Pick a Date & Time</h4>
 
                 <label>𝄜 Select a Date:</label><br>
-                <input type="date" id="booking-date"><br><br>
+                <input type="date" id="booking-date" required
+                data-tip="Select a future date for your appointment.">
+                <p class="error-msg">Please choose a date.</p>
+                <p class="valid-msg">Date selected</p>
+                <br><br>
 
                 <label>⏱︎ Select a Time:</label><br>
-                <select id="booking-time">
-                    <option value="">Select a Time</option>
+                <select id="booking-time" name="time" required 
+                data-tip="Choose a time slot for your appointment.">
+                    <option value="" disabled selected>Select a Time</option>
                     <option>09:00</option>
                     <option>09:30</option>
                     <option>10:00</option>
@@ -563,6 +582,8 @@
                     <option>16:00</option>
                     <option>16:30</option>
                 </select>
+                <p class="error-msg">Please select a time.</p>
+                <p class="valid-msg">Time selected.</p>
             </div>
 
             <br>
@@ -573,14 +594,35 @@
                 <h4><span class="numberStep">3</span>Your Information</h4>
 
                 <label>ጸ First Name:</label><br>
-                <input type="text"><br><br>
+                <input id="firstName"
+                name="firstName"
+                type="text"
+                required
+                minlength="2"
+                data-tip="Enter your first name then we can identify your booking.">
+                <p class="error-msg">First name is required at least 2 characters.</p>
+                <p class="valid-msg">Looks good</p>
+                <br><br>
 
                 <label>ጸ Last Name:</label><br>
-                <input type="text"><br><br>
+                <input id="lastName"
+                name="lastName"
+                type="text"
+                required
+                minlength="2"
+                data-tip="Enter your last name then we can identify your booking.">
+                <p class="error-msg">Last name is required at least 2 characters.</p>
+                <p class="valid-msg">Looks good</p>
+                <br><br>
 
                 <label>★ Phone Number (no space):</label><br>
-                <input id="phone" type="text" pattern="^\d{10}$" required>
-                <div id="phone-error" class="text-danger small"></div><br><br>
+                <input id="phone" type="text" pattern="^\d{10}$" required
+                data-tip="Enter a 10-digit phone number(numbers only).">
+                <p class="hint">10-digit number only.</p>
+                <p class="error-msg">Phone number must be exactly 10 digits.</p>
+                <p class="valid-msg">Looks good</p>
+                <div id="phone-error" class="text-danger small"></div>
+                <br><br>
             </div>
 
             <br>
@@ -591,19 +633,30 @@
                 <h4><span class="numberStep">$</span>Your Payment Information</h4>
 
                 <label>★ Card Number (no space):</label><br>
-                <input id="card" type="text" pattern="^\d{16}$" required>
+                <input id="card" type="text" pattern="^\d{16}$" required
+                data-tip="Enter your 16-digit card number(number only).">
                 <div id="card-error" class="text-danger small"></div><br><br>
 
                 <label>𝄜 Expiry Date:</label><br>
-                <input id="expiry" type="text" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/\d{2}$" required>
+                <input id="expiry" type="text" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/\d{2}$" required
+                data-tip="Enter expiry in MM/YY format(example:12/25).">
                 <div id="expiry-error" class="text-danger small"></div><br><br>
 
                 <label>★ CVC:</label><br>
-                <input id="cvc" type="text" pattern="^\d{3}$" required>
+                <input id="cvc" type="text" pattern="^\d{3}$" required
+                data-tip="Enter the 3-digit security code on your card.">
                 <div id="cvc-error" class="text-danger small"></div><br><br>
 
                 <label>ጸ Name on Card:</label><br>
-                <input type="text"><br><br>
+                <input id="cardName"
+                name="cardName"
+                type="text"
+                required
+                minlength="2"
+                data-tip="Enter the full name printed on the card.">
+                <p class="error-msg">Name on card is required at least 2 characters</p>
+                <p class="valid-msg">Looks good</p>
+                <br><br>
             </div>
 
             <br>
