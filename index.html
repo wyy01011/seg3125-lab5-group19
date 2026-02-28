@@ -821,7 +821,7 @@
         function filterTimes() {
             const s = schedule[staffEl.value];
 
-            timeEl.innerHTML = `<option value="">Select a Time</option>`;
+            timeEl.innerHTML = `<option value="" disabled selected>Select a Time</option>`;
 
             if (!s) { // no staff selected -> show all
                 allTimes.forEach(t => timeEl.insertAdjacentHTML("beforeend", `<option>${t}</option>`));
@@ -833,6 +833,8 @@
                 const tm = toMin(t);
                 if (tm >= start && tm <= end) timeEl.insertAdjacentHTML("beforeend", `<option>${t}</option>`);
             });
+
+            updateSubmitState();
         }
 
         const fp = flatpickr(dateEl, {
