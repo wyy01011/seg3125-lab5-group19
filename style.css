@@ -238,20 +238,15 @@ h3, h4 {
   background-position: center; 
   background-repeat: no-repeat;
 
-  display: flex;
-  align-items: center；
-  justify-content：space-between;
-  gap: 16px;
-
-  padding:18px 40px;
+  padding:40px 0;
   color:white; 
-  flex-wrap:wrap;          
+       
 }
 
 .navButtons {
     display: flex;
-    justify-content: flex-end;
-    gap: 1rem; 
+    justify-content: center;
+    gap: 2.5rem; 
 }
 
 /*Styling for the booking container's section.*/
